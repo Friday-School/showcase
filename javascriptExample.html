@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<title>Javascript Example</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    label,
+    textarea {
+        font-size: .8rem;
+        letter-spacing: 1px;
+    }
+
+    textarea {
+        padding: 10px;
+        line-height: 1.5;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-shadow: 1px 1px 1px #999;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+</style>
+<script>
+    function ftoc() {
+        const f = Number(document.getElementById('Fahrenheit').value);
+        const c = (f - 32) / 1.8;
+        document.getElementById('Celsius').value = c;
+    }
+    function ctof() {
+        const c = Number(document.getElementById('Celsius').value);
+        const f = c * 1.8 + 32;
+        document.getElementById('Fahrenheit').value = f;
+    }
+</script>
+
+<body>
+
+    <label for="Fahrenheit">Enter Fahrenheit value:</label>
+    <textarea id="Fahrenheit" name="Fahrenheit">32</textarea>
+    <label for="Celsius">Enter Celsius value:</label>
+    <textarea id="Celsius" name="Celsius">0</textarea>
+    <div>
+        <button onclick="ftoc()">Fahrenheit to Celsius </button>
+    </div>
+    <div>
+        <button onclick="ctof()">Celsius to Fahrenheit </button>
+    </div>
+</body>
+
+</html>
